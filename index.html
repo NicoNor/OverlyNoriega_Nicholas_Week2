@@ -3,25 +3,59 @@
 
    <head>
 
-     	<title></title>
+     	<title>Employee Directory</title>
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
      	<link rel="stylesheet" type="text/css" href="css/main.css"></link>
       <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-      <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
 
    </head>
 
-   <body>
-     
+   <body ng-app="MyApp" ng-controller="MyNewController">
+
+
     <section>
 
+      <h1>Employee Directory</h1>
 
+      <form>
+        <label>Name:</label>
+        <input type="text" name="name" ng-model='newAddress.name'> <br>
+
+        <label>Street:</label>
+        <input type="text" name="street" ng-model='newAddress.street'> <br>
+
+        <label>City:</label>
+        <input type="text" name="city" ng-model='newAddress.city'> <br>
+
+        <label>State:</label>
+        <input type="text" name="state" ng-model='newAddress.state'> <br>
+
+        <label>Zip Code:</label>
+        <input type="text" name="zip-code" ng-model='newAddress.zipCode'> <br>
+
+        <button ng-click= "addNewAddress()">Add Entry</button>
+        <button ng-click= "clearIt()">Clear All Data</button>
+
+      </form>
 
     </section>
 
+    <div>
+    <ul ng-repeat="item in addresses track by $index">
+      <button id="escape" type="button" ng-click="removeMe($index)">&times;</button>
+      <li><span>Name:</span><p>{{item.name}}<p></li>
+      <li><span>Address:</span>
+        {{item.address}} <br>
+        {{item.city}}, {{item.state}} <br>
+        {{item.zip}}
+      </li>
+    </ul>
+    <div>
 
      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"> </script>
-     <script src="js/main.js"> </script>
+     <script src="js/main.js"></script>
+     <script src="js/dataService.js"></script>
    </body>
  </html>
