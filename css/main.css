@@ -9,6 +9,20 @@ section {
   font-size: 3em;
 }
 
+form button {
+  background: #E36E40;
+  border: none;
+  border-radius: 1.8em;
+  font-family: 'Oswald';
+  font-weight: bold;
+  padding: 1em 1.1em;
+  color: #161819;
+}
+
+form button:hover {
+  border: .3em solid #ccc;
+}
+
 div {
   max-width: 1000px;
   margin: 0 auto;
