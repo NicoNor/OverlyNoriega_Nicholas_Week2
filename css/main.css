@@ -44,17 +44,6 @@ li {
   clear: both;
 }
 
-#escape {
-  float: right;
-  margin:.2em .25em 0 0;
-  padding: 0;
-  font-weight: bold;
-  color: white;
-  background: #161819;
-  border: none;
-  font-size: 1.2em;
-}
-
 #escape:hover {
   background: #8EF2FF;
   color: #000;
@@ -91,10 +80,4 @@ span {
 }
 ul li:first-of-type {
   margin-bottom: .4em;
-}
-
-p {
-  margin: 0;
-  padding: 0;
-  font-size: 1.2em;
 }
